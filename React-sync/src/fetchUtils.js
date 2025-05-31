@@ -1,7 +1,7 @@
 // Utility function to fetch data from a public API
 // Example uses the JSONPlaceholder API for demonstration
 
-export async function fetchData(url) {
+async function fetchData(url) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -14,3 +14,5 @@ export async function fetchData(url) {
     return { error: error.message };
   }
 }
+
+module.exports = { fetchData };
